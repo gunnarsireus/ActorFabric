@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Fabric;
+using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Actors.Runtime;
@@ -14,6 +15,8 @@ namespace HelloWorld
         /// </summary>
         private static void Main()
         {
+            new ArgumentException();
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
             try
             {
                 // This line registers an Actor Service to host your actor class with the Service Fabric runtime.
